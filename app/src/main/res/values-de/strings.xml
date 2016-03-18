@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Corinnas Pflanzenbestimmung</string>
+    <string name="welcome_text">Willkommen</string>
+    <string name="families_scientific_name_0"></string>
+    <string name="family_names_0">Familie 1</string>
+    <string name="family_names_1">Familie 2</string>
+    <string name="action_about">Über</string>
+    <string name="title_activity_about">Über diese App</string>
+    <string name="about_text">Diese App ist für Corinna Schulzes Pflanzenbestimmungskurs</string>
+</resources>

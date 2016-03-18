@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="family_names">
+        <item>@string/family_names_0</item>
+        <item>@string/family_names_1</item>
+    </array>
+    <array name="family_scientific_names">
+        <item>@string/family_scientific_names_0</item>
+        <item>@string/family_scientific_names_1</item>
+    </array>
+</resources>
