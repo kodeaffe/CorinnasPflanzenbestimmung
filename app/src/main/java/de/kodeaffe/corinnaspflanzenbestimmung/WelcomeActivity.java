@@ -36,17 +36,18 @@ public class WelcomeActivity extends AppCompatActivity {
         SQLiteDatabase db = new Datastorage(this).getReadableDatabase();
         String table = "family";
         String[] columns = {"id", "name"};
-        Cursor result = db.query(
+        Cursor cursor = db.query(
                 Datastorage.FAMILY_TABLE_NAME, columns, null, null, null, null, null, null);
-        Log.i("Welcome", "Count: " + new Integer(result.getCount()).toString());
-        result.moveToPosition(-1);
-        while (result.moveToNext()) {
-            Integer id = result.getInt(0);
-            String name = result.getString(1);
+        Log.i("Welcome", "Count: " + Integer.toString(cursor.getCount()));
+        cursor.moveToPosition(-1);
+        while (cursor.moveToNext()) {
+            Integer id = cursor.getInt(0);
+            String name = cursor.getString(1);
             Log.i("Welcome", "name: " + name);
             Button button = getFamilyButton(id, name);
             container.addView(button);
         }
+        cursor.close();
     }
 
 
@@ -57,7 +58,7 @@ public class WelcomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        LinearLayout container = (LinearLayout) findViewById(R.id.container_family);
+        LinearLayout container = (LinearLayout) findViewById(R.id.container_families);
         addFamilies(container);
     }
 

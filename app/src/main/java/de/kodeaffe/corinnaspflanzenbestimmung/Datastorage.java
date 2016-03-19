@@ -39,7 +39,7 @@ public class Datastorage extends SQLiteOpenHelper {
         Resources res = this.context.getResources();
         TypedArray names = res.obtainTypedArray(R.array.family_names);
         TypedArray scientific_names = res.obtainTypedArray(R.array.family_scientific_names);
-        Log.i("Datastorage", "names len" + new Integer(names.length()).toString());
+        Log.i("Datastorage", "names len" + Integer.toString(names.length()));
         for (int i = 0; i < names.length(); i++) {
             ContentValues values = new ContentValues();
             final String name = names.getString(i);
@@ -61,7 +61,7 @@ public class Datastorage extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int old_version, int new_version) {
-        Log.i("Datastorage", "old: " + new Integer(old_version).toString() + " new: " + new Integer(new_version).toString());
+        Log.i("Datastorage", "old: " + Integer.toString(old_version) + " new: " + Integer.toString(new_version));
     }
 }
 
