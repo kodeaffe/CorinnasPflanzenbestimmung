@@ -1,8 +1,6 @@
 package de.kodeaffe.corinnaspflanzenbestimmung;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,17 +12,21 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 
+import java.util.List;
+
+
+
 public class WelcomeActivity extends AppCompatActivity {
 
-    private Button getFamilyButton(final Integer id, final String name) {
+    private Button getFamilyButton(final String[] family) {
         Button button = new Button(WelcomeActivity.this);
-        button.setText(name);
+        button.setText(family[1]);
         final WelcomeActivity caller = this;
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(caller, FamilyActivity.class);
-                Log.i("Welcome", "id: " + id.toString());
-                intent.putExtra(FamilyActivity.FAMILY_ID, id);
+                Log.i("WelcomeActivity.getFamilyButton", "Id: " + family[0]);
+                intent.putExtra(FamilyActivity.FAMILY_ID, family[0]);
                 startActivity(intent);
             }
         });
@@ -33,21 +35,13 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
     private void addFamilies(LinearLayout container) {
-        SQLiteDatabase db = new Datastorage(this).getReadableDatabase();
-        String table = "family";
-        String[] columns = {"id", "name"};
-        Cursor cursor = db.query(
-                Datastorage.FAMILY_TABLE_NAME, columns, null, null, null, null, null, null);
-        Log.i("Welcome", "Count: " + Integer.toString(cursor.getCount()));
-        cursor.moveToPosition(-1);
-        while (cursor.moveToNext()) {
-            Integer id = cursor.getInt(0);
-            String name = cursor.getString(1);
-            Log.i("Welcome", "name: " + name);
-            Button button = getFamilyButton(id, name);
+        List families = new Datastorage(this).getFamilies();
+        for (int i = 0; i < families.size(); i++) {
+            String[] family = (String[]) families.get(i);
+            Log.i("WelcomeActivity.addFamilies", "Family: " + family.toString());
+            Button button = getFamilyButton(family);
             container.addView(button);
         }
-        cursor.close();
     }
 
 
