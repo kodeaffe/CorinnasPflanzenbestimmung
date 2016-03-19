@@ -1,9 +1,6 @@
 package de.kodeaffe.corinnaspflanzenbestimmung;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -22,62 +19,81 @@ import de.kodeaffe.corinnaspflanzenbestimmung.FamilyContract.Family;
 
 public class Datastorage extends SQLiteAssetHelper {
 
-    private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "coripflabe.db";
+	private static final int DATABASE_VERSION = 1;
+	private static final String DATABASE_NAME = "coripflabe.db";
 
 
-    public Datastorage(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
-    }
+	public Datastorage(Context context) {
+		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+	}
 
 
 
-    // Get table name depending on locale language
-    private String getTableName (String baseTableName) {
-        String lang = Locale.getDefault().getLanguage();
-        if (lang.isEmpty() || lang.startsWith("en")) {
-            return baseTableName;
-        } else {
-            return baseTableName + "_" + lang;
-        }
-    }
-
-    public String[] getFamily(String id) {
-        String[] family = {null, null};
-        SQLiteDatabase db = getReadableDatabase();
-        String[] columns = {Family.COLUMN_NAME, Family.COLUMN_SCIENTIFIC_NAME};
-        String selection = Family._ID + " = ?";
-        String[] selectionArgs = {id};
-        Cursor cursor = db.query(
-                getTableName(Family.TABLE), columns, selection, selectionArgs,
-                null, null, null, null);
-        Integer count = cursor.getCount();
-        Log.i("Datastorage.getFamily", "Count: " + Integer.toString(count));
-        if (count == 1) {
-            cursor.moveToPosition(0);
-            family[0] = cursor.getString(0);
-            family[1] = cursor.getString(1);
-            Log.i("Datastorage.getFamily", "Family: " + family.toString());
-        }
-        cursor.close();
-        return family;
-    }
+	// Get table name depending on locale language
+	private String getTableName (String baseTableName) {
+		String lang = Locale.getDefault().getLanguage();
+		if (lang.isEmpty() || lang.startsWith("en")) {
+			return baseTableName;
+		} else {
+			return baseTableName + "_" + lang;
+		}
+	}
 
 
-    public List getFamilies() {
-        List families = new ArrayList();
-        SQLiteDatabase db = getReadableDatabase();
-        String[] columns = {Family._ID, Family.COLUMN_NAME};
-        Cursor cursor = db.query(
-                getTableName(Family.TABLE), columns, null, null, null, null, null, null);
-        Log.i("Datastorage.getFamilies", "Count: " + Integer.toString(cursor.getCount()));
-        cursor.moveToPosition(-1);
-        while (cursor.moveToNext()) {
-            String[] family = {Integer.toString(cursor.getInt(0)), cursor.getString(1)};
-            families.add(family);
-        }
-        cursor.close();
-        return families;
-    }
+	private List getObject(String baseTableName, String[] columns, String id) {
+		List object = new ArrayList();
+		String tableName = getTableName(baseTableName);
+		SQLiteDatabase db = getReadableDatabase();
+		String selection = "_id = ?";
+		String[] selectionArgs = {id};
+		Cursor cursor = db.query(
+			tableName, columns, selection, selectionArgs,
+			null, null, null, null);
+		Integer count = cursor.getCount();
+		Log.d("Datastorage.getObject", "Count: " + Integer.toString(count));
+		if (count == 1) {
+			cursor.moveToPosition(0);
+			object.add(cursor.getString(0));
+			object.add(cursor.getString(1));
+			Log.d("Datastorage.getObject", "Object: " + object.toString());
+		}
+		cursor.close();
+		return object;
+	}
+
+
+	public List getObjects(String baseTableName, String[] columns) {
+		List objects = new ArrayList();
+		String tableName = getTableName(baseTableName);
+		SQLiteDatabase db = getReadableDatabase();
+		Cursor cursor = db.query(
+			tableName, columns, null, null, null, null, null, null);
+		Log.d("Datastorage.getObjects",
+			"Count: " + Integer.toString(cursor.getCount()));
+		cursor.moveToPosition(-1);
+		while (cursor.moveToNext()) {
+			List object = new ArrayList();
+			object.add(Integer.toString(cursor.getInt(0)));
+			object.add(cursor.getString(1));
+			objects.add(object);
+		}
+		cursor.close();
+		return objects;
+	}
+
+
+	public List getFamily(String id) {
+		String[] columns = {Family.COLUMN_NAME, Family.COLUMN_SCIENTIFIC_NAME};
+		List family = getObject(Family.TABLE, columns, id);
+		Log.d("Datastorage.getFamily", "Family: " + family.toString());
+		return family;
+	}
+
+
+	public List getFamilies() {
+		String[] columns = {Family._ID, Family.COLUMN_NAME};
+		List families = getObjects(Family.TABLE, columns);
+		return families;
+	}
 }
 

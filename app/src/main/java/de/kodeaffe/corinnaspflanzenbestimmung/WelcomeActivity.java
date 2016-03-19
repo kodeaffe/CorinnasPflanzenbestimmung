@@ -18,15 +18,17 @@ import java.util.List;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    private Button getFamilyButton(final String[] family) {
+    private Button getFamilyButton(final List family) {
         Button button = new Button(WelcomeActivity.this);
-        button.setText(family[1]);
+        button.setText((String) family.get(1));
         final WelcomeActivity caller = this;
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(caller, FamilyActivity.class);
-                Log.i("WelcomeActivity.getFamilyButton", "Id: " + family[0]);
-                intent.putExtra(FamilyActivity.FAMILY_ID, family[0]);
+                Log.d("WelcomeActivity.getFamilyButton",
+                        "Id: " + family.get(0));
+                intent.putExtra(
+					FamilyActivity.FAMILY_ID, (String) family.get(0));
                 startActivity(intent);
             }
         });
@@ -37,8 +39,8 @@ public class WelcomeActivity extends AppCompatActivity {
     private void addFamilies(LinearLayout container) {
         List families = new Datastorage(this).getFamilies();
         for (int i = 0; i < families.size(); i++) {
-            String[] family = (String[]) families.get(i);
-            Log.i("WelcomeActivity.addFamilies", "Family: " + family.toString());
+            List family = (List) families.get(i);
+            Log.d("WelcomeActivity.addFamilies", "Family: " + family.toString());
             Button button = getFamilyButton(family);
             container.addView(button);
         }

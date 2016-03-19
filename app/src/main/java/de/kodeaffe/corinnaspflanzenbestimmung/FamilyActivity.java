@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.util.List;
 
 
 public class FamilyActivity extends AppCompatActivity {
@@ -15,13 +16,14 @@ public class FamilyActivity extends AppCompatActivity {
     private void setFamily() {
         Intent intent = getIntent();
         String id = intent.getStringExtra(FamilyActivity.FAMILY_ID);
-        Log.i("FamilyActiviy.setFamily", "Id: " + id);
-        String[] family = new Datastorage(this).getFamily(id);
-        Log.i("FamilyActivity.setFamily", "Family: " + family.toString());
-        TextView text_name = (TextView) findViewById(R.id.family_name);
-        text_name.setText(family[0]);
-        TextView text_scientific_name = (TextView) findViewById(R.id.family_scientific_name);
-        text_scientific_name.setText(family[1]);
+        Log.d("FamilyActiviy.setFamily", "Id: " + id);
+        List family = new Datastorage(this).getFamily(id);
+        Log.d("FamilyActivity.setFamily", "Family: " + family.toString());
+        TextView name = (TextView) findViewById(R.id.family_name);
+        name.setText((String) family.get(0));
+        TextView scientific_name =
+			(TextView) findViewById(R.id.family_scientific_name);
+        scientific_name.setText((String) family.get(1));
     }
 
 
