@@ -19,8 +19,8 @@ public final class FamilyContract {
         public static final String SQL_CREATE_TABLE =
                 "CREATE TABLE " + TABLE + " (" +
                         _ID + " INTEGER PRIMARY KEY," +
-                        COLUMN_NAME + " TEXT, " +
-                        COLUMN_SCIENTIFIC_NAME + " TEXT)";
+                        COLUMN_NAME + " TEXT NOT NULL, " +
+                        COLUMN_SCIENTIFIC_NAME + " TEXT NOT NULL)";
         public static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE;
     }
 }

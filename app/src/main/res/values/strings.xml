@@ -2,10 +2,6 @@
     <string name="app_name">Corinnas Pflanzenbestimmung</string>
     <string name="action_about">About</string>
     <string name="about_text">This app is for Corinna Schulz\'s plant determination course</string>
-    <string name="family_names_0">Fam1</string>
-    <string name="family_names_1">Fam2</string>
-    <string name="family_scientific_names_0">lorem ipsum</string>
-    <string name="family_scientific_names_1">foorum barum</string>
     <string name="title_activity_about">About this app</string>
     <string name="title_activity_family">Show Family</string>
     <string name="family_name">Name</string>
