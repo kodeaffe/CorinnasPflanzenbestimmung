@@ -7,4 +7,7 @@
     <string name="family_scientific_names_0">lorem ipsum</string>
     <string name="family_scientific_names_1">foorum barum</string>
     <string name="title_activity_about">About this app</string>
+    <string name="title_activity_family">Show Family</string>
+    <string name="table_head_name">Name</string>
+    <string name="table_head_scientific_name">Scientific Name</string>
 </resources>

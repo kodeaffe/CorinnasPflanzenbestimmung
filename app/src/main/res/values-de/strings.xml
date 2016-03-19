@@ -7,4 +7,7 @@
     <string name="action_about">Über</string>
     <string name="title_activity_about">Über diese App</string>
     <string name="about_text">Diese App ist für Corinna Schulzes Pflanzenbestimmungskurs</string>
+    <string name="title_activity_family">Zeige Familie</string>
+    <string name="table_head_name">Name</string>
+    <string name="table_head_scientific_name">Wissenschaftlicher Name</string>
 </resources>

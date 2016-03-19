@@ -16,12 +16,16 @@ import android.widget.LinearLayout;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    private Button getFamilyButton(String name) {
+    private Button getFamilyButton(final Integer id, final String name) {
         Button button = new Button(WelcomeActivity.this);
         button.setText(name);
+        final WelcomeActivity caller = this;
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Log.i("WelcomeActivity", name);
+                Intent intent = new Intent(caller, FamilyActivity.class);
+                Log.i("Welcome", "id: " + id.toString());
+                intent.putExtra(FamilyActivity.FAMILY_ID, id);
+                startActivity(intent);
             }
         });
         return button;
@@ -29,15 +33,18 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
     private void addFamilies(LinearLayout container) {
-        SQLiteDatabase db = new Datastorage(WelcomeActivity.this).getReadableDatabase();
+        SQLiteDatabase db = new Datastorage(this).getReadableDatabase();
         String table = "family";
-        String[] columns = {"name"};
-        Cursor result = db.query(table, columns, null, null, null, null, null, null);
+        String[] columns = {"id", "name"};
+        Cursor result = db.query(
+                Datastorage.FAMILY_TABLE_NAME, columns, null, null, null, null, null, null);
         Log.i("Welcome", "Count: " + new Integer(result.getCount()).toString());
+        result.moveToPosition(-1);
         while (result.moveToNext()) {
-            String name = result.getString(0);
+            Integer id = result.getInt(0);
+            String name = result.getString(1);
             Log.i("Welcome", "name: " + name);
-            Button button = getFamilyButton(name);
+            Button button = getFamilyButton(id, name);
             container.addView(button);
         }
     }
@@ -50,7 +57,7 @@ public class WelcomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        LinearLayout container = (LinearLayout) findViewById(R.id.container_families);
+        LinearLayout container = (LinearLayout) findViewById(R.id.container_family);
         addFamilies(container);
     }
 
