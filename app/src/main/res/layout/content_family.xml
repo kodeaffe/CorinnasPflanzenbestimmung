@@ -13,20 +13,39 @@
         android:text="@string/family_name"
         android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/family_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
     <TextView
         android:text="@string/family_scientific_name"
         android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/family_scientific_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
+    <TextView
+        android:text="@string/family_examples"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/family_examples"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
+
 
 </LinearLayout>
 

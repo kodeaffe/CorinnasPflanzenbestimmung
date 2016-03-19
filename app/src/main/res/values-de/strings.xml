@@ -6,4 +6,7 @@
     <string name="title_activity_family">Zeige Familie</string>
     <string name="family_scientific_name">Wissenschaftlicher Name</string>
     <string name="family_name">Name</string>
+    <string name="family_examples">Beispiele</string>
+    <string name="nome">Keine</string>
+    <string name="none">Keine</string>
 </resources>

@@ -24,6 +24,8 @@ public class FamilyActivity extends AppCompatActivity {
         TextView scientific_name =
 			(TextView) findViewById(R.id.family_scientific_name);
         scientific_name.setText((String) family.get(1));
+        TextView examples = (TextView) findViewById(R.id.family_examples);
+        examples.setText((String) family.get(2));
     }
 
 
