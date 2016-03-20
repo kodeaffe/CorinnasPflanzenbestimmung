@@ -24,6 +24,9 @@ public class Datastorage extends SQLiteAssetHelper {
 	private static final int DATABASE_VERSION = 3;
 	private static final String DATABASE_NAME = "coripflabe.db";
 
+	/* For rows concatenated into one column on joins */
+	private static final String DATA_SEPERATOR = "\n";
+
     private Context mContext;
 
 	public Datastorage(Context context) {
@@ -59,63 +62,30 @@ public class Datastorage extends SQLiteAssetHelper {
 	}
 
 
-	private String getExamples(SQLiteDatabase db, String family_id) {
-		/*
-		String query = "SELECT f." + Family.COLUMN_NAME + ", " +
-			"f." + Family.COLUMN_SCIENTIFIC_NAME + ", " +
-			"e." + Example.COLUMN_DATA + " " +
-			"FROM " + tableName + " AS f " +
-			"INNER JOIN " + tableNameExample + " AS e " +
-			"ON f." + Family._ID + " = e." + Example.COLUMN_FAMILY_ID + " " +
-			"WHERE f." + Family._ID + " = ?";
-		Log.d("Datastorage.getObject", "Query: " + query);
-		Cursor cursor = db.rawQuery(query, selectionArgs);
-		*/
-        List examples = new ArrayList();
-        String tableName = getTableName(Example.TABLE);
-		String[] columns = {Example.COLUMN_DATA};
-		String selection = Example.COLUMN_FAMILY_ID + " = ?";
-		String[] selectionArgs = {family_id};
-
-		Cursor cursor = db.query(
-			tableName, columns, selection, selectionArgs,
-			null, null, null, null);
-		Log.d("Datastorage.getExamples",
-			"Count: " + Integer.toString(cursor.getCount()));
-		cursor.moveToPosition(-1);
-		while (cursor.moveToNext()) {
-			examples.add(cursor.getString(0));
-		}
-		cursor.close();
-
-        Log.d("Datastorage.getExamples", "Examples: " + examples.toString());
-		String joined = StringUtils.join(examples, "\n");
-        if (joined.isEmpty()) {
-            return mContext.getResources().getString(R.string.none);
-        }
-        return joined;
-	}
-
-
 	public List getFamily(String id) {
 		List family = new ArrayList();
 		SQLiteDatabase db = getReadableDatabase();
 		String tableName = getTableName(Family.TABLE);
-		String[] columns = {Family.COLUMN_NAME, Family.COLUMN_SCIENTIFIC_NAME};
-		String selection = "_id = ?";
+		String exampleTableName = getTableName(Example.TABLE);
 		String[] selectionArgs = {id};
+		String query = "SELECT f." + Family.COLUMN_NAME + ", " +
+			"f." + Family.COLUMN_SCIENTIFIC_NAME + ", " +
+			"group_concat(e." + Example.COLUMN_DATA + ", '" + DATA_SEPERATOR + "') " +
+			"FROM " + tableName + " AS f " +
+			"LEFT JOIN " + exampleTableName + " AS e " +
+			"ON f." + Family._ID + " = e." + Example.COLUMN_FAMILY_ID + " " +
+			"WHERE f." + Family._ID + " = ?";
+		Log.d("Datastorage.getFamily", "Query: " + query);
+		Cursor cursor = db.rawQuery(query, selectionArgs);
 
-		Cursor cursor = db.query(
-			tableName, columns, selection, selectionArgs,
-			null, null, null, null);
 		Integer count = cursor.getCount();
-		Log.d("Datastorage.getObject", "Count: " + Integer.toString(count));
+		Log.d("Datastorage.getFamily", "Count: " + Integer.toString(count));
 		if (count == 1) {
 			cursor.moveToPosition(0);
 			family.add(cursor.getString(0));
 			family.add(cursor.getString(1));
-			family.add(getExamples(db, id));
-			Log.d("Datastorage.getObject", "Object: " + family.toString());
+			family.add(cursor.getString(2));
+			Log.d("Datastorage.getFamily", "Family: " + family.toString());
 		}
 		cursor.close();
 		return family;
