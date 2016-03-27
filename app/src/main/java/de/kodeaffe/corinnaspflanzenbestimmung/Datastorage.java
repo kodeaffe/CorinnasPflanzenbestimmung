@@ -21,7 +21,7 @@ import de.kodeaffe.corinnaspflanzenbestimmung.ExampleContract.Example;
 
 public class Datastorage extends SQLiteAssetHelper {
 
-	private static final int DATABASE_VERSION = 4;
+	private static final int DATABASE_VERSION = 5;
 	private static final String DATABASE_NAME = "coripflabe.db";
 
 	/* For rows concatenated into one column on joins */
