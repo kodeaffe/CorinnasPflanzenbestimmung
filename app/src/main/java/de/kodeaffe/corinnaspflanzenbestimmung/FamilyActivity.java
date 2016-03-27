@@ -1,10 +1,14 @@
 package de.kodeaffe.corinnaspflanzenbestimmung;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -13,11 +17,27 @@ import java.util.List;
 public class FamilyActivity extends AppCompatActivity {
     public final static String FAMILY_ID = "family_id";
 
+    private void addDrawings(Datastorage storage, String id) {
+        List drawings = storage.getFamilyDrawings(id);
+        LinearLayout layout = (LinearLayout) findViewById(R.id.layoutFamily);
+        String packageName = getPackageName();
+        Resources resources = getResources();
+        for (Object drawing : drawings) {
+            int drawingId = resources.getIdentifier((String) drawing, "drawable", packageName);
+            ImageView image = new ImageView(this);
+            image.setImageResource(drawingId);
+            image.setPadding(0, 10, 0, 0);
+            layout.addView(image);
+        }
+    }
+
+
     private void setFamily() {
         Intent intent = getIntent();
         String id = intent.getStringExtra(FamilyActivity.FAMILY_ID);
         Log.d("FamilyActiviy.setFamily", "Id: " + id);
-        List family = new Datastorage(this).getFamily(id);
+        Datastorage storage = new Datastorage(this);
+        List family = storage.getFamily(id);
         Log.d("FamilyActivity.setFamily", "Family: " + family.toString());
 
         setTitle((String) family.get(0));
@@ -73,6 +93,8 @@ public class FamilyActivity extends AppCompatActivity {
 
         TextView examples = (TextView) findViewById(R.id.family_examples);
         examples.setText((String) family.get(17));
+
+        addDrawings(storage, id);
     }
 
 

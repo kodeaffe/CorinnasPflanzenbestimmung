@@ -6,10 +6,10 @@ CREATE TABLE "family_de" (
 	`flower_formula`	TEXT,
 	`flower_type`	TEXT,
 	`flower_perianth`	TEXT,
-	`flower_stamen`	TEXT,
-	`flower_ovary`	TEXT,
 	`flower_sepal`	TEXT,
 	`flower_petal`	TEXT,
+	`flower_stamen`	TEXT,
+	`flower_ovary`	TEXT,
 	`fruit`	TEXT,
 	`sorus`	TEXT,
 	`leaf`	TEXT,
@@ -20,12 +20,11 @@ CREATE TABLE "family_de" (
 	`misc`	TEXT,
 	PRIMARY KEY(_id)
 );
-INSERT INTO `family_de` VALUES (1,'Narzissengewächse','Amaryllidaceae','r P3+3 A3+3 G(3)','radiär','Perigon aus 2 dreizähligen Kreisen, frei oder verwachsen, zuweilen mit
-Nebenkrone','2 Kreise mit je drei Staubblättern','1, unterständig, coenocarp aus 3 Fruchtblättern, dreifächrig','---','---','Kapseln, selten Beeren','---','einfach, oft schmal linealisch, ganzrandig - ohne Lauchgeruch','---','---','Zwiebel-, selten Knollengeophyten','Amaryllidaceen-Alkaloide z.B. Galanthamin','- Unterscheidung von den Liliengewächsen durch den unterständigen Fruchtknoten, von den Schwertliliengewächsen durch die doppelte Zahl an Staubblättern (6 statt 3)');
-INSERT INTO `family_de` VALUES (2,'Schwertliliengewächse','Iridaceae','r bis z P3+3 A3 G(3)','radiär, selten leicht zygomorph (Gladiole)','Perigon aus 2 dreizähligen Kreisen, frei oder verwachsen','1 Kreis mit drei Staubblättern','1, unterständig, coenocarp aus 3 Fruchtblättern, dreifächrig','---','---','Kapseln','---','grasartig schmal oder schwertförmig','---','---','Rhizom-, Knollen- und Zwiebelgeophyten, ausdauernd','Triterpensaponine
+INSERT INTO `family_de` VALUES (1,'Narzissengewächse','Amaryllidaceae','r P3+3 A3+3 G(3)','radiär','Perigon aus 2 dreizähligen Kreisen, frei oder verwachsen, zuweilen mit Nebenkrone','---','---','2 Kreise mit je drei Staubblättern','1, unterständig, coenocarp aus 3 Fruchtblättern, dreifächrig','Kapseln, selten Beeren','---','einfach, oft schmal linealisch, ganzrandig - ohne Lauchgeruch','---','---','Zwiebel-, selten Knollengeophyten','Amaryllidaceen-Alkaloide z.B. Galanthamin','- Unterscheidung von den Liliengewächsen durch den unterständigen Fruchtknoten, von den Schwertliliengewächsen durch die doppelte Zahl an Staubblättern (6 statt 3)');
+INSERT INTO `family_de` VALUES (2,'Schwertliliengewächse','Iridaceae','r bis z P3+3 A3 G(3)','radiär, selten leicht zygomorph (Gladiole)','Perigon aus 2 dreizähligen Kreisen, frei oder verwachsen','---','---','1 Kreis mit drei Staubblättern','1, unterständig, coenocarp aus 3 Fruchtblättern, dreifächrig','Kapseln','---','grasartig schmal oder schwertförmig','---','---','Rhizom-, Knollen- und Zwiebelgeophyten, ausdauernd','Triterpensaponine
 Crocetin (Carotinoidsäure in Verbindung mit Zucker) = Safran; seltene Substanz, Verwendung als Gewürz-, Farb- und Heilmittel, gewonnen aus den Narben von Crocus sativus (Herbstkrokus - Persien, Indien)','- Unterscheidung von den Liliaceae durch den Wegfall eines Staubblattkreises und den unterständigen Fruchtknoten
 - Unterscheidung von den Amaryllidaceae durch den Wegfall eines Staubblattkreises');
-INSERT INTO `family_de` VALUES (3,'Liliengewächse','Liliaceae','r P3+3 A3+3 G(3)','radiär','Perigon aus 2 dreizähligen Kreisen','2 dreizählige Kreise','1, oberständig, coenocarp aus 3 Fruchtblättern, dreifächrig','---','---','Kapsel','---','einfach, sitzend, wechselständig bis scheinquirlig','---','---','Stauden mit unterirdischen Erneuerungsknospen (Geophyten), die an unterirdischen Speicherorganen sitzen
+INSERT INTO `family_de` VALUES (3,'Liliengewächse','Liliaceae','r P3+3 A3+3 G(3)','radiär','Perigon aus 2 dreizähligen Kreisen','---','---','2 dreizählige Kreise','1, oberständig, coenocarp aus 3 Fruchtblättern, dreifächrig','Kapsel','---','einfach, sitzend, wechselständig bis scheinquirlig','---','---','Stauden mit unterirdischen Erneuerungsknospen (Geophyten), die an unterirdischen Speicherorganen sitzen
 Zwiebel-, selten Rhizompflanze','z.T. Chelidonsäure, Steroidsaponine','- bis 2010 wurden folgende Gattungen unter den Liliengewächsen zusammengefasst; diese bilden nun eigenständige Familien (aber gleiche Blütenformel)
 - Lauchgewächse (Alliaceae): Küchenzwiebel, Porree, Lauch (Allium); Lauchgeruch, B in Dolden
 - Hyacinthengewächse (Hyacinthaceae): Blaustern (Scilla); Hyazinthe (Hyacinthus), Traubenhyazinthe (Muscari), Milchstern (Ornithogalum); Zwiebelpfl. ohne Lauchgeruch, B blau
@@ -33,43 +32,43 @@ Zwiebel-, selten Rhizompflanze','z.T. Chelidonsäure, Steroidsaponine','- bis 20
 - Mäusedorngewächse (Ruscaceae): Schattenblume (Majanthemum); Maiglöckchen (Convallaria); Salomonsiegel (Polygonatum)
 - Tagliliengewächse (Hemerocallidaceae): Taglilie (Hemerocallis), Rhizom, B gelb, orange
 - Zeitlosengewächse (Colchicaceae): Herbstzeitlose (Colchicum)');
-INSERT INTO `family_de` VALUES (4,'Veilchengewächse','Violaceae','z oder r K5 C5 A5 G (3)','dorsiventral mit Sporn oder radiär','5 freie Kelchblätter, 5 freie Kronblätter','5','1, oberständig, aus 3 Fruchtblättern verwachsen, 1 Griffel, oft s-förmig gebogen, Narbe sehr vielgestaltig','5 freie','5 freie','Kapseln, dreiklappig, vielsamig, Samen mit Ölkörper','---','wechselständig, mit Nebenblättern (manchmal nur am Grund, meist herzförmig)','---','meist herzförmig, manchmal nur am Grund','Kräuter, Sträucher, in den Tropen Bäume und Lianen','---','---');
-INSERT INTO `family_de` VALUES (5,'Kreuzblütengewächse','Brassicaceae','d bis r K4 C4 A2+4 G(2)','disymetrisch oder radiär, meist in Trauben','4 freie Kelchblätter; 4 freie Kronblätter, bilden Blütenkreuze','2 Kreise, der äußere mit 2 kurzen, der innere mit 4 langen Staubblättern','1, oberständig, coenocarp aus 2 Fruchtblättern, zweifächrig, getrennt durch eine falsche Scheidewand','4 freie','4 freie, bilden Blütenkreuze, können gespalten sein','Schötchen oder Schoten - wenn weniger/mehr als dreimal so lang wie breit, Fruchtblätter lösen sich beim Öffnen von der falschen Scheidewand','---','wechselständig, keine Nebenblätter, oft tief fiederspaltig','---','---','Kräuter und Stauden, sehr selten Gehölze','Senfölglycoside, bei Verletzung der Pflanze Freisetzung der stechend riechenden Senföle nach der Reaktion mit dem Enzym Myrosinase','---');
+INSERT INTO `family_de` VALUES (4,'Veilchengewächse','Violaceae','z oder r K5 C5 A5 G (3)','dorsiventral mit Sporn oder radiär','5 freie Kelchblätter, 5 freie Kronblätter','5 freie','5 freie','5','1, oberständig, aus 3 Fruchtblättern verwachsen, 1 Griffel, oft s-förmig gebogen, Narbe sehr vielgestaltig','Kapseln, dreiklappig, vielsamig, Samen mit Ölkörper','---','wechselständig, mit Nebenblättern (manchmal nur am Grund, meist herzförmig)','---','meist herzförmig, manchmal nur am Grund','Kräuter, Sträucher, in den Tropen Bäume und Lianen','---','---');
+INSERT INTO `family_de` VALUES (5,'Kreuzblütengewächse','Brassicaceae','d bis r K4 C4 A2+4 G(2)','disymetrisch oder radiär, meist in Trauben','4 freie Kelchblätter; 4 freie Kronblätter, bilden Blütenkreuze','4 freie','4 freie, bilden Blütenkreuze, können gespalten sein','2 Kreise, der äußere mit 2 kurzen, der innere mit 4 langen Staubblättern','1, oberständig, coenocarp aus 2 Fruchtblättern, zweifächrig, getrennt durch eine falsche Scheidewand','Schötchen oder Schoten - wenn weniger/mehr als dreimal so lang wie breit, Fruchtblätter lösen sich beim Öffnen von der falschen Scheidewand','---','wechselständig, keine Nebenblätter, oft tief fiederspaltig','---','---','Kräuter und Stauden, sehr selten Gehölze','Senfölglycoside, bei Verletzung der Pflanze Freisetzung der stechend riechenden Senföle nach der Reaktion mit dem Enzym Myrosinase','---');
 INSERT INTO `family_de` VALUES (6,'Hahnenfußgewächse','Ranunculaceae','r bis z K2-∞ C5-∞ (oder P) A∞ G1-∞','radiär bis zygomorph','Blütenblätter frei, Perigon oder Perianth, Kronblätter (oder
-kronblattartige Perigonblätter) häufig mit Nektardrüsen oder kronblattartige, stark glänzende Nektarblättern (= umgebildete Staubbeutel)','viele','einer bis viele, oberständig','2 bis viele','5 bis viele','Nüsschen (Gattung Hahnenfuß), Balgfrüchte, selten Beeren','---','wechsel- oder grundständig (nur Waldrebe gegenständig), oft handförmig geteilt oder zusammengesetzt; Blattstiel am Grund scheidig, keine Nebenblätter – höchstens sehr kleine','---','keine, höchstens sehr kleine','Kräuter, Stauden, selten Gehölze (Waldrebe)','oft Gifte z.B. Protoanemonin beim Hahnenfuß oder Aconitin beim Eisenhut','- einige Vertreter (Hahnenfuß) ähneln auf dem ersten Blick sehr den Rosaceae (v.a. durch die 5 Blütenblätter und vielen Staubblätter)
+kronblattartige Perigonblätter) häufig mit Nektardrüsen oder kronblattartige, stark glänzende Nektarblättern (= umgebildete Staubbeutel)','2 bis viele','5 bis viele','viele','einer bis viele, oberständig','Nüsschen (Gattung Hahnenfuß), Balgfrüchte, selten Beeren','---','wechsel- oder grundständig (nur Waldrebe gegenständig), oft handförmig geteilt oder zusammengesetzt; Blattstiel am Grund scheidig, keine Nebenblätter – höchstens sehr kleine','---','keine, höchstens sehr kleine','Kräuter, Stauden, selten Gehölze (Waldrebe)','oft Gifte z.B. Protoanemonin beim Hahnenfuß oder Aconitin beim Eisenhut','- einige Vertreter (Hahnenfuß) ähneln auf dem ersten Blick sehr den Rosaceae (v.a. durch die 5 Blütenblätter und vielen Staubblätter)
 - Unterscheidungsmerkmal zu den Rosengewächsen: Hahnenfußgewächse haben mitunter gespornte Blüten und sehr oft Nektarblätter, beide Merkmale kommen bei den Rosengewächsen nie vor; typisch für die Rosengewächse ist dagegen oft ein Außenkelch und Nebenblätter, was bei den Hahnenfußgewächsen äußerst selten auftritt');
-INSERT INTO `family_de` VALUES (7,'Nelkengewächse','Caryophyllaceae','r K(5) oder 5 C5 A5 oder 5+5 G(5)','radiär, in Dichasien','5 Kelchblätter z.T. verwachsen; 5 Kronblätter (selten Blüte 4zählig)','1 Kreis mit 5 Staubblättern oder 2 Kreise mit je 5 Staubblättern','1, oberständig, coenocarp aus 5 Fruchtblättern, fünffächrig','5, zum Teil verwachsen','5, können so tief eingeschnitten sein, dass sie 10 vortäuschen','meist Kapseln','---','einfach, meist ganzrandig und oft schmal, fast stets gegenständig, teils mit Nebenblättern','---','teilweise','Kräuter und Stauden','verbreitet oberflächenaktive Triterpensaponine (Seifenwirkung) z.B. Gypsogenin','- wenn röhrig verwachsene Kelchblätter, dann Kronblätter mit schmalem Abschnitt in der Kronröhre (Nagel) und breiten Abschnitt (Platte)
+INSERT INTO `family_de` VALUES (7,'Nelkengewächse','Caryophyllaceae','r K(5) oder 5 C5 A5 oder 5+5 G(5)','radiär, in Dichasien','5 Kelchblätter z.T. verwachsen; 5 Kronblätter (selten Blüte 4zählig)','5, zum Teil verwachsen','5, können so tief eingeschnitten sein, dass sie 10 vortäuschen','1 Kreis mit 5 Staubblättern oder 2 Kreise mit je 5 Staubblättern','1, oberständig, coenocarp aus 5 Fruchtblättern, fünffächrig','meist Kapseln','---','einfach, meist ganzrandig und oft schmal, fast stets gegenständig, teils mit Nebenblättern','---','teilweise','Kräuter und Stauden','verbreitet oberflächenaktive Triterpensaponine (Seifenwirkung) z.B. Gypsogenin','- wenn röhrig verwachsene Kelchblätter, dann Kronblätter mit schmalem Abschnitt in der Kronröhre (Nagel) und breiten Abschnitt (Platte)
 - wenn freie Kelchblätter, dann oft tief zweispaltige Kronblätter und oft Ausfall eines Staubblattkreises und mit häutigen Nebenblättern');
 INSERT INTO `family_de` VALUES (8,'Lippenblütengewächse','Lamiaceae','z K(5) [C(5) A2+2] G(2)','zygomorph','5 verwachsene Kelchblätter, Kelch manchmal zweilippig; 5 verwachsene
-Kronblätter, 3 bilden die Unterlippe, 2 die Oberlippe','4, paarweise mit verschieden langen Filamenten, Filamente mit den
+Kronblätter, 3 bilden die Unterlippe, 2 die Oberlippe','5 verwachsene','5 verwachsene, 3 bilden Unterlippe, 2 die Oberlippe','4, paarweise mit verschieden langen Filamenten, Filamente mit den
 Kronblättern verwachsen','1, oberständig, coenocarp aus 2 Fruchtblättern, seine 2 Fächer werden
 durch eine falsche Scheidewand in 4 Klausen geteilt, zwischen denen
-der Griffel steht','5 verwachsene','5 verwachsene, 3 bilden Unterlippe, 2 die Oberlippe','4 einsamige Teilfrüchte (Klausen)','---','ungeteilt, kreuzweise gegenständig, selten quirlig, ohne Nebenblätter,
+der Griffel steht','4 einsamige Teilfrüchte (Klausen)','---','ungeteilt, kreuzweise gegenständig, selten quirlig, ohne Nebenblätter,
 an vierkantigem Stängel','---','---','Kräuter, Stauden, Sträucher','ätherische Öle in Drüsenhaaren und -schuppen, Heil- und Gewürzpflanzen','---');
-INSERT INTO `family_de` VALUES (9,'Storchschnabelgewächse','Geraniaceae','r K5 C5 A5+5 G(5)','radiär','jeweils 5 freie Kelch- und Kronblätter','2 Kreise mit je 5 Staubblättern','1, oberständig, coenocarp aus 5 Fruchtblättern','5 freie','5 freie','- Spaltfrüchte, in je 5 schnabelartig verlängerte einsamige Teilfrüchte zerfallend
+INSERT INTO `family_de` VALUES (9,'Storchschnabelgewächse','Geraniaceae','r K5 C5 A5+5 G(5)','radiär','jeweils 5 freie Kelch- und Kronblätter','5 freie','5 freie','2 Kreise mit je 5 Staubblättern','1, oberständig, coenocarp aus 5 Fruchtblättern','- Spaltfrüchte, in je 5 schnabelartig verlängerte einsamige Teilfrüchte zerfallend
 - bei Reife rollen sich die Schnabelteile des lang ausgezogenen Fruchtknotens auf und schleudern dabei Samen fort - Streufrucht','---','wechselständig, handnervig, Nebenblätter stets vorhanden','---','immer vorhanden','Kräuter und Stauden','---','---');
 INSERT INTO `family_de` VALUES (10,'Korbblütengewächse','Asteraceae','r bis z K5 [C(5) A5] G(2)','radiär bis zygomorph, zu mehreren bis vielen auf kugeliger, scheibenförmiger oder krugartiger Blütenstandsachse (Korbboden), die so gebildeten Blütenstände können Einzelblüten vortäuschen, Tragblätter der Einzelblüten sind oft zu borstenartigen Spreublättern umgewandelt oder fallen aus','Die ursprünglichen 5 Kelchblätter fehlen oder sind zu haarartigen
-Gebilden, dem Pappus, umgewandelt, der Pappus kann zu Flughaaren der Samen auswachsen (Löwenzahn) oder grannenartig o. schuppenförmig umgebildet; 5 oder 3 verwachsene Kronblätter, die bei Zungenblüten (= Strahlenblüten) flächig verwachsen sind oder bei Röhrenblüten röhrig oder trichterförmig verwachsen sind','5, die Staubbeutel verwachsen an den Längsseiten zu einer den Griffel
-umschließenden Röhre','1, unterständig, coenocarp aus 2 Fruchtblättern, einfächrig','ursprünglich 5: fehlen oder zu Pappus umgewandelt','5 oder 3, verwachsen (flächig: Zungenblüten, röhrig: Röhrenblüten)','einsamige Schließfrüchte, bei der (ähnlich wie bei den Gräsern) Samen- und Fruchtschale miteinander verwachsen sind','---','wechselständig, ohne Nebenblätter','Korb, der von Hüllblättern umgeben ist, manchmal noch zusätzlich Außenhüllblätter','---','Kräuter und Stauden, in niederen Breiten auch Gehölze','---','- Gliederung in zwei Unterfamilien:
+Gebilden, dem Pappus, umgewandelt, der Pappus kann zu Flughaaren der Samen auswachsen (Löwenzahn) oder grannenartig o. schuppenförmig umgebildet; 5 oder 3 verwachsene Kronblätter, die bei Zungenblüten (= Strahlenblüten) flächig verwachsen sind oder bei Röhrenblüten röhrig oder trichterförmig verwachsen sind','ursprünglich 5: fehlen oder zu Pappus umgewandelt','5 oder 3, verwachsen (flächig: Zungenblüten, röhrig: Röhrenblüten)','5, die Staubbeutel verwachsen an den Längsseiten zu einer den Griffel
+umschließenden Röhre','1, unterständig, coenocarp aus 2 Fruchtblättern, einfächrig','einsamige Schließfrüchte, bei der (ähnlich wie bei den Gräsern) Samen- und Fruchtschale miteinander verwachsen sind','---','wechselständig, ohne Nebenblätter','Korb, der von Hüllblättern umgeben ist, manchmal noch zusätzlich Außenhüllblätter','---','Kräuter und Stauden, in niederen Breiten auch Gehölze','---','- Gliederung in zwei Unterfamilien:
 - Cichorienartige (Cichorioideae) mit ausschließlich Zungenblüten (Zunge aus allen 5 Kronblättern, deshalb fünfspitzig), randständige Blüten oft vergrößert und steril, die inneren Blüten täuschen im noch nicht voll erblühten Zustand Röhrenblüten vor, Pflanzen beinhalten Milchsaft
 - Asternartige (Asteroideae) stets mit Röhrenblüten und oft randlichen Zungenblüten (Zunge nur aus 3 Kronblättern, deshalb dreispitzig)');
 INSERT INTO `family_de` VALUES (11,'Raublattgewächse','Boraginaceae','r bis z K5 [C(5) A5] G(2)','radiär, selten zygomorph (Natternkopf), in Wickeln oder Doppelwickeln','5 freie Kelchblätter; 5 miteinander verwachsene Kronblätter, am Eingang
-zur Kronröhre oft mit Schlundschuppen, die eine Nebenkrone bilden','5, Filamente mit den Kronblättern verwachsen','1, oberständig, coenocarp aus 2 Fruchtblättern, die beiden Fächer
+zur Kronröhre oft mit Schlundschuppen, die eine Nebenkrone bilden','5 freie','5 verwachsene','5, Filamente mit den Kronblättern verwachsen','1, oberständig, coenocarp aus 2 Fruchtblättern, die beiden Fächer
 werden durch eine falsche Scheidewand in 4 Klausen getrennt,
-zwischen denen der Griffel steht','5 freie','5 verwachsene','meist 4 einsamige Teilfrüchte (Klausen), oft bestachelt; selten Kapseln','---','wechselständig, ungeteilt, mit starker steifer Behaarung (Versteifung durch Einlagerung von Siliziumdioxid und Kalziumcarbonat)','---','---','Kräuter und Stauden','---','beim Altern der Blüten häufig ein Farbumschlag von Rot nach Blau');
+zwischen denen der Griffel steht','meist 4 einsamige Teilfrüchte (Klausen), oft bestachelt; selten Kapseln','---','wechselständig, ungeteilt, mit starker steifer Behaarung (Versteifung durch Einlagerung von Siliziumdioxid und Kalziumcarbonat)','---','---','Kräuter und Stauden','---','beim Altern der Blüten häufig ein Farbumschlag von Rot nach Blau');
 INSERT INTO `family_de` VALUES (12,'Schachtelhalmgewächse','Equisetaceae','---','---','---','---','---','---','---','---','- Sporen bilden sich in Sporenbehältern (Sporangien), die auf Sporangienträgern (Ährentragende Sprosse) erscheinen
 - Ähren tragende Sprosse entwickeln sich z.T. jahreszeitlich getrennt von den vegetativen Sprossen und können z.T. deutliche morphologische Unterschiede aufweisen','- zu Schuppen reduziert und zu gezähnten Scheiden verwachsen, stehen quirlständig um die Achsen am oberen Rand eines Stängelabschnitts;
 - was auf den ersten Blick als linealische Blätter erscheint, sind Seitenverzweigungen des Hauptsprosses, auch hier sind an den Enden der einzelnen Segmente die Schuppenblätter vorhanden','---','---','Stauden','---','---');
-INSERT INTO `family_de` VALUES (13,'Schmetterlingsblüten- oder Hülsenfruchtgewächse','Fabaceae','z K(5) C3+(2) A(10) oder (9)+1 G(1)','zygomorph, meist in Trauben','Blütenhülle: 5 verwachsene Kelchblätter; 5 Kronblätter - das oberste als Fahne (bestehend aus Platte und Nagel), die 2 seitlichen als Flügel bezeichnet, die 2 untersten zum Schiffchen verwachsen','10, an den Filamenten verwachsen, entweder alle 10 zu einer Röhre oder
-9 zu einer oben offenen Röhre, die vom 10. Staubblatt abgedeckt wird','1, oberständig, aus 1 Fruchtblatt, steht in der Staubblattröhre','5 verwachsene','5: oberstes=Fahne, 2 seitliche=Flügel, 2 untersten verwachsenen=Schiffchen','Hülsen','---','wechselständig, fast immer gefiedert oder 3-zählig, an Stelle von Fiederblättchen oft Ranken, mit Nebenblättern','---','immer vorhanden','Kräuter, Stauden, in den Tropen oft Gehölze','- Isoflavone mit Östrogen-Wirkung, z.B. Genistein
+INSERT INTO `family_de` VALUES (13,'Schmetterlingsblüten- oder Hülsenfruchtgewächse','Fabaceae','z K(5) C3+(2) A(10) oder (9)+1 G(1)','zygomorph, meist in Trauben','Blütenhülle: 5 verwachsene Kelchblätter; 5 Kronblätter - das oberste als Fahne (bestehend aus Platte und Nagel), die 2 seitlichen als Flügel bezeichnet, die 2 untersten zum Schiffchen verwachsen','5 verwachsene','5: oberstes=Fahne, 2 seitliche=Flügel, 2 untersten verwachsenen=Schiffchen','10, an den Filamenten verwachsen, entweder alle 10 zu einer Röhre oder
+9 zu einer oben offenen Röhre, die vom 10. Staubblatt abgedeckt wird','1, oberständig, aus 1 Fruchtblatt, steht in der Staubblattröhre','Hülsen','---','wechselständig, fast immer gefiedert oder 3-zählig, an Stelle von Fiederblättchen oft Ranken, mit Nebenblättern','---','immer vorhanden','Kräuter, Stauden, in den Tropen oft Gehölze','- Isoflavone mit Östrogen-Wirkung, z.B. Genistein
 - bittere Lupinen-Alkaloide wie das Lupinin','viele Arten gehen Symbiose mit Bakterien (Rhizobien) ein, die in Wurzelknöllchen Luftstickstoff binden');
 INSERT INTO `family_de` VALUES (14,'Rosengewächse','Rosaceae','r K5 C5 A∞ G1-∞','radiär','5 Kelchblätter, darum oft noch ein Außenkelch aus Hochblättern; 5
-Kronblätte','viele, aber immer n x 5, in Kreisen','1 bis viele, ober- bis unterständig, sehr variabel','5 freie','5 (4) freie','nach den Unterfamilien verschieden: Kapseln, Nüsse, Steinfrüchte, Beeren; allgemein sehr
+Kronblätte','5 freie','5 (4) freie','viele, aber immer n x 5, in Kreisen','1 bis viele, ober- bis unterständig, sehr variabel','nach den Unterfamilien verschieden: Kapseln, Nüsse, Steinfrüchte, Beeren; allgemein sehr
 variabel','---','wechselständig, meist mit Nebenblättern (außer Spierstrauchartige), oft tief geteilt, z.T. gefiedert (Rosen)','---','meist vorhanden','Kräuter, Stauden, Gehölze','typisch sind Gerbstoffe, aber auch Triterpene und Cyanogene','- im Unterschied zu Ranunculaceae oft Außenkelch, meist Nebenblätter, Perianth
 - 4 Unterfamilien: Spierstrauchartige (Spiraeoideae), Rosenartige (Rosoideae), Apfelartige (Maloideae), Steinobstartige (Prunoidea)');
-INSERT INTO `family_de` VALUES (15,'Doldenblütengewächse','Apiaceae','r K5 C5 A5 G(2)','radiär, am Rand von Dolden auch zygomorph, in einfachen oder zusammengesetzten Dolden, die Tragblätter der Doldenstrahlen 1. bzw. 2. Ordnung werden als Hülle bzw. Hüllchen bezeichnet','5 Kelchblätter, oft rückgebildet; 5 Kronblätter (meist weiß oder gelb)','5','1, unterständig, aus 2 Fruchtblättern, zweifächrig, über dem
+INSERT INTO `family_de` VALUES (15,'Doldenblütengewächse','Apiaceae','r K5 C5 A5 G(2)','radiär, am Rand von Dolden auch zygomorph, in einfachen oder zusammengesetzten Dolden, die Tragblätter der Doldenstrahlen 1. bzw. 2. Ordnung werden als Hülle bzw. Hüllchen bezeichnet','5 Kelchblätter, oft rückgebildet; 5 Kronblätter (meist weiß oder gelb)','5 freie, oft rückgebildet','5 freie, meist weiß/gelb','5','1, unterständig, aus 2 Fruchtblättern, zweifächrig, über dem
 Fruchtknoten eine Nektar absondernde Scheibe (Discus), aus der die 2
-Griffel herausragen','5 freie, oft rückgebildet','5 freie, meist weiß/gelb','- Spaltfrüchte, entstehend durch das Auseinanderweichen der beiden Fruchtblätter an ihrer Verwachsungsfläche
+Griffel herausragen','- Spaltfrüchte, entstehend durch das Auseinanderweichen der beiden Fruchtblätter an ihrer Verwachsungsfläche
 - manchmal mit Schnabel (samenloser, verschmälerter oberer Teil der Frucht)
 - Teilfrüchte werden durch einen Fruchtträger zusammengehalten','---','wechselständig, meist gefiedert, oft große Blattscheide','Hülle bzw. Hüllchen: Tragblätter der Dolden bzw. Döldchen','---','Kräuter, meist aber Stauden','- ätherische Öle wie das Carvon des Kümmels
 - starke Giftstoffe wie das Coniin des Schierlings','---');
@@ -89,10 +88,10 @@ CREATE TABLE "family" (
 	`flower_formula`	TEXT,
 	`flower_type`	TEXT,
 	`flower_perianth`	TEXT,
-	`flower_stamen`	TEXT,
-	`flower_ovary`	TEXT,
 	`flower_sepal`	TEXT,
 	`flower_petal`	TEXT,
+	`flower_stamen`	TEXT,
+	`flower_ovary`	TEXT,
 	`fruit`	TEXT,
 	`sorus`	TEXT,
 	`leaf`	TEXT,
@@ -280,4 +279,114 @@ INSERT INTO `example_de` VALUES (173,'Wurmfarn (Dryopteris, Dryopteridaceae, Pol
 INSERT INTO `example_de` VALUES (174,'Adlerfarngewächse (Dennstaedtiaceae, Polypodiopsida)',16);
 INSERT INTO `example_de` VALUES (175,'Adlerfarn (Pteridium, Dennstaedtiaceae, Polypodiopsida)',16);
 CREATE TABLE example (_id integer primary key, data text not null, family_id integer, foreign key(family_id) references family(_id));
+CREATE TABLE drawing_de (
+  '_ID' INTEGER PRIMARY KEY,
+                        'drawable' TEXT NOT NULL,
+                        'family_id' INTEGER,
+                        FOREIGN KEY(family_id) REFERENCES family_de (_ID));
+INSERT INTO `drawing_de` VALUES (1,'amaryllidaceae_a',1);
+INSERT INTO `drawing_de` VALUES (2,'amaryllidaceae_b',1);
+INSERT INTO `drawing_de` VALUES (3,'amaryllidaceae_c',1);
+INSERT INTO `drawing_de` VALUES (4,'amaryllidaceae_galanthamin',1);
+INSERT INTO `drawing_de` VALUES (5,'iridaceae_a',2);
+INSERT INTO `drawing_de` VALUES (6,'iridaceae_b',2);
+INSERT INTO `drawing_de` VALUES (7,'iridaceae_c',2);
+INSERT INTO `drawing_de` VALUES (8,'iridaceae_crocetin',2);
+INSERT INTO `drawing_de` VALUES (9,'iridaceae_d',2);
+INSERT INTO `drawing_de` VALUES (10,'liliaceae_a',3);
+INSERT INTO `drawing_de` VALUES (11,'liliaceae_b',3);
+INSERT INTO `drawing_de` VALUES (12,'liliaceae_chelidon_acid',3);
+INSERT INTO `drawing_de` VALUES (13,'liliaceae_c',3);
+INSERT INTO `drawing_de` VALUES (14,'liliaceae_diosgenin',3);
+INSERT INTO `drawing_de` VALUES (15,'apiaceae_a',15);
+INSERT INTO `drawing_de` VALUES (16,'apiaceae_b',15);
+INSERT INTO `drawing_de` VALUES (17,'apiaceae_c',15);
+INSERT INTO `drawing_de` VALUES (18,'apiaceae_d',15);
+INSERT INTO `drawing_de` VALUES (19,'apiaceae_e',15);
+INSERT INTO `drawing_de` VALUES (20,'asteraceae_a',10);
+INSERT INTO `drawing_de` VALUES (21,'asteraceae_b',10);
+INSERT INTO `drawing_de` VALUES (22,'asteraceae_c',10);
+INSERT INTO `drawing_de` VALUES (23,'asteraceae_d',10);
+INSERT INTO `drawing_de` VALUES (24,'asteraceae_e',10);
+INSERT INTO `drawing_de` VALUES (25,'asteraceae_f',10);
+INSERT INTO `drawing_de` VALUES (26,'asteraceae_g',10);
+INSERT INTO `drawing_de` VALUES (27,'asteraceae_h',10);
+INSERT INTO `drawing_de` VALUES (28,'asteraceae_j',10);
+INSERT INTO `drawing_de` VALUES (29,'asteraceae_k',10);
+INSERT INTO `drawing_de` VALUES (30,'asteraceae_matricariaester',10);
+INSERT INTO `drawing_de` VALUES (31,'asteraceae_santanolid',10);
+INSERT INTO `drawing_de` VALUES (32,'boraginaceae_allantoin',11);
+INSERT INTO `drawing_de` VALUES (33,'boraginaceae_a',11);
+INSERT INTO `drawing_de` VALUES (34,'boraginaceae_b',11);
+INSERT INTO `drawing_de` VALUES (35,'boraginaceae_c',11);
+INSERT INTO `drawing_de` VALUES (36,'boraginaceae_d',11);
+INSERT INTO `drawing_de` VALUES (37,'boraginaceae_e',11);
+INSERT INTO `drawing_de` VALUES (38,'boraginaceae_f',11);
+INSERT INTO `drawing_de` VALUES (39,'brassicaceae_a',5);
+INSERT INTO `drawing_de` VALUES (40,'brassicaceae_b',5);
+INSERT INTO `drawing_de` VALUES (41,'brassicaceae_c',5);
+INSERT INTO `drawing_de` VALUES (42,'brassicaceae_d',5);
+INSERT INTO `drawing_de` VALUES (43,'brassicaceae_e',5);
+INSERT INTO `drawing_de` VALUES (44,'brassicaceae_f',5);
+INSERT INTO `drawing_de` VALUES (45,'brassicaceae_glucocapparin',5);
+INSERT INTO `drawing_de` VALUES (46,'caryophyllaceae_a',7);
+INSERT INTO `drawing_de` VALUES (47,'caryophyllaceae_b',7);
+INSERT INTO `drawing_de` VALUES (48,'caryophyllaceae_c',7);
+INSERT INTO `drawing_de` VALUES (49,'caryophyllaceae_d',7);
+INSERT INTO `drawing_de` VALUES (50,'caryophyllaceae_gypsogenin',7);
+INSERT INTO `drawing_de` VALUES (51,'equisetaceae_a',12);
+INSERT INTO `drawing_de` VALUES (52,'equisetaceae_b',12);
+INSERT INTO `drawing_de` VALUES (53,'equisetaceae_c',12);
+INSERT INTO `drawing_de` VALUES (54,'equisetaceae_d',12);
+INSERT INTO `drawing_de` VALUES (55,'fabaceae_a',13);
+INSERT INTO `drawing_de` VALUES (56,'fabaceae_b',13);
+INSERT INTO `drawing_de` VALUES (57,'fabaceae_c',13);
+INSERT INTO `drawing_de` VALUES (58,'fabaceae_d',13);
+INSERT INTO `drawing_de` VALUES (59,'fabaceae_e',13);
+INSERT INTO `drawing_de` VALUES (60,'fabaceae_genistein',13);
+INSERT INTO `drawing_de` VALUES (61,'fabaceae_lupinin',13);
+INSERT INTO `drawing_de` VALUES (62,'geraniaceae_a',9);
+INSERT INTO `drawing_de` VALUES (63,'geraniaceae_b',9);
+INSERT INTO `drawing_de` VALUES (64,'geraniaceae_c',9);
+INSERT INTO `drawing_de` VALUES (65,'geraniaceae_d',9);
+INSERT INTO `drawing_de` VALUES (66,'geraniaceae_e',9);
+INSERT INTO `drawing_de` VALUES (67,'geraniaceae_f',9);
+INSERT INTO `drawing_de` VALUES (68,'geraniaceae_g',9);
+INSERT INTO `drawing_de` VALUES (69,'lamiaceae_a',8);
+INSERT INTO `drawing_de` VALUES (70,'lamiaceae_b',8);
+INSERT INTO `drawing_de` VALUES (71,'lamiaceae_c',8);
+INSERT INTO `drawing_de` VALUES (72,'lamiaceae_d',8);
+INSERT INTO `drawing_de` VALUES (73,'lamiaceae_e',8);
+INSERT INTO `drawing_de` VALUES (74,'lamiaceae_menthol',8);
+INSERT INTO `drawing_de` VALUES (75,'pteridophytina_a',16);
+INSERT INTO `drawing_de` VALUES (76,'pteridophytina_b',16);
+INSERT INTO `drawing_de` VALUES (77,'pteridophytina_c',16);
+INSERT INTO `drawing_de` VALUES (78,'pteridophytina_d',16);
+INSERT INTO `drawing_de` VALUES (79,'pteridophytina_e',16);
+INSERT INTO `drawing_de` VALUES (80,'pteridophytina_f',16);
+INSERT INTO `drawing_de` VALUES (81,'pteridophytina_g',16);
+INSERT INTO `drawing_de` VALUES (82,'ranunculaceae_a',6);
+INSERT INTO `drawing_de` VALUES (83,'ranunculaceae_b',6);
+INSERT INTO `drawing_de` VALUES (84,'ranunculaceae_c',6);
+INSERT INTO `drawing_de` VALUES (85,'ranunculaceae_d',6);
+INSERT INTO `drawing_de` VALUES (86,'ranunculaceae_e',6);
+INSERT INTO `drawing_de` VALUES (87,'ranunculaceae_protoanemonin',6);
+INSERT INTO `drawing_de` VALUES (88,'rosaceae_amygdalin',14);
+INSERT INTO `drawing_de` VALUES (89,'rosaceae_a',14);
+INSERT INTO `drawing_de` VALUES (90,'rosaceae_b',14);
+INSERT INTO `drawing_de` VALUES (91,'rosaceae_c',14);
+INSERT INTO `drawing_de` VALUES (92,'rosaceae_d',14);
+INSERT INTO `drawing_de` VALUES (93,'rosaceae_e',14);
+INSERT INTO `drawing_de` VALUES (94,'rosaceae_f',14);
+INSERT INTO `drawing_de` VALUES (95,'rosaceae_g',14);
+INSERT INTO `drawing_de` VALUES (96,'rosaceae_h',14);
+INSERT INTO `drawing_de` VALUES (97,'violaceae_a',4);
+INSERT INTO `drawing_de` VALUES (98,'violaceae_b',4);
+INSERT INTO `drawing_de` VALUES (99,'violaceae_c',4);
+INSERT INTO `drawing_de` VALUES (100,'violaceae_d',4);
+CREATE TABLE drawing (
+  '_ID' INTEGER PRIMARY KEY,
+                        'drawable' TEXT NOT NULL,
+                        'family_id' INTEGER,
+                        FOREIGN KEY(family_id) REFERENCES family (_ID));
 COMMIT;

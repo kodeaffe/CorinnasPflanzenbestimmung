@@ -6,13 +6,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import de.kodeaffe.corinnaspflanzenbestimmung.FamilyContract.Family;
+import de.kodeaffe.corinnaspflanzenbestimmung.DrawingContract.Drawing;
 import de.kodeaffe.corinnaspflanzenbestimmung.ExampleContract.Example;
 
 /**
@@ -21,7 +21,7 @@ import de.kodeaffe.corinnaspflanzenbestimmung.ExampleContract.Example;
 
 public class Datastorage extends SQLiteAssetHelper {
 
-	private static final int DATABASE_VERSION = 7;
+	private static final int DATABASE_VERSION = 9;
 	private static final String DATABASE_NAME = "coripflabe.db";
 
 	/* For rows concatenated into one column on joins */
@@ -119,6 +119,29 @@ public class Datastorage extends SQLiteAssetHelper {
 		}
 		cursor.close();
 		return family;
+	}
+
+
+	public List getFamilyDrawings(String id) {
+		List drawings = new ArrayList();
+		SQLiteDatabase db = getReadableDatabase();
+		String tableName = getTableName(Drawing.TABLE);
+		String[] columns = {Drawing.COLUMN_DRAWABLE};
+		String selection = Drawing.COLUMN_FAMILY_ID + " = ?";
+		String[] selectionArgs = {id};
+		Cursor cursor = db.query(
+				tableName, columns, selection, selectionArgs, null, null, null);
+		Integer count = cursor.getCount();
+		Log.d("Datastorage.getFamilyDrawings", "Count: " + Integer.toString(count));
+
+		cursor.moveToPosition(-1);
+		while (cursor.moveToNext()) {
+			String drawing = cursor.getString(0);
+			Log.d("Datastorage.getFamilyDrawings", "Drawing: " + drawing);
+			drawings.add(cursor.getString(0));
+		}
+		cursor.close();
+		return drawings;
 	}
 
 
