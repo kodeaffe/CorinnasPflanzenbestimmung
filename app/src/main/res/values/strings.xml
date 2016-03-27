@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Corinnas Pflanzenbestimmung</string>
     <string name="action_about">About</string>
-    <string name="about_text">This app is for Corinna Schulz\'s plant determination course</string>
+    <string name="about_text">This app is for a plant determination course at Hochschule für nachhaltige Entwicklung in Eberswalde (HNEE)</string>
     <string name="title_activity_about">About this app</string>
     <string name="title_activity_family">Show Family</string>
     <string name="family_name">Name</string>

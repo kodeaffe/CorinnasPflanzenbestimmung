@@ -54,7 +54,7 @@ public class WelcomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        LinearLayout container = (LinearLayout) findViewById(R.id.container_families);
+        LinearLayout container = (LinearLayout) findViewById(R.id.layoutFamiliesByName);
         addFamilies(container);
     }
 

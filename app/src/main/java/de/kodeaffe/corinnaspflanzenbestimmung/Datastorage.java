@@ -21,7 +21,7 @@ import de.kodeaffe.corinnaspflanzenbestimmung.ExampleContract.Example;
 
 public class Datastorage extends SQLiteAssetHelper {
 
-	private static final int DATABASE_VERSION = 5;
+	private static final int DATABASE_VERSION = 7;
 	private static final String DATABASE_NAME = "coripflabe.db";
 
 	/* For rows concatenated into one column on joins */
@@ -127,8 +127,9 @@ public class Datastorage extends SQLiteAssetHelper {
 		SQLiteDatabase db = getReadableDatabase();
 		String tableName = getTableName(Family.TABLE);
 		String[] columns = {Family._ID, Family.COLUMN_NAME};
+		String orderBy = Family.COLUMN_NAME;
 		Cursor cursor = db.query(
-			tableName, columns, null, null, null, null, null, null);
+			tableName, columns, null, null, null, null, orderBy);
 		Log.d("Datastorage.getFamilies",
 			"Count: " + Integer.toString(cursor.getCount()));
 		cursor.moveToPosition(-1);

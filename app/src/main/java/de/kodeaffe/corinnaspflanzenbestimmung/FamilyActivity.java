@@ -20,8 +20,7 @@ public class FamilyActivity extends AppCompatActivity {
         List family = new Datastorage(this).getFamily(id);
         Log.d("FamilyActivity.setFamily", "Family: " + family.toString());
 
-        TextView name = (TextView) findViewById(R.id.family_name);
-        name.setText((String) family.get(0));
+        setTitle((String) family.get(0));
 
         TextView scientific_name =
 			(TextView) findViewById(R.id.family_scientific_name);

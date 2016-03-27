@@ -1,250 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/container_family"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_family">
+    android:fillViewport="true"
+    android:id="@+id/scrollViewFamilies"
+    tools:showIn="@layout/activity_family"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:text="@string/family_name"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layoutFamily">
 
-    <TextView
-        android:text="@string/family_scientific_name"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_scientific_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_scientific_name"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_scientific_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_flower_formula"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_flower_formula"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_flower_formula"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_flower_formula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_flower_type"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_flower_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_flower_type"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_flower_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_flower_perianth"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_flower_perianth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_flower_perianth"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_flower_perianth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_flower_stamen"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_flower_stamen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_flower_sepal"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_flower_sepal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_flower_ovary"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_flower_ovary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_flower_petal"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_flower_petal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_flower_sepal"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_flower_sepal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_flower_stamen"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_flower_stamen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_flower_petal"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_flower_petal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_flower_ovary"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_flower_ovary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_fruit"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_fruit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_fruit"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_fruit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_sorus"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_sorus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_sorus"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_sorus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_leaf"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_leaf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_leaf"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_leaf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_involucro"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_involucro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_involucro"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_involucro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_stipule"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_stipule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_stipule"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_stipule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_morphology"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_morphology"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_morphology"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_morphology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_ingredients"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_ingredients"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_ingredients"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-     <TextView
-        android:text="@string/family_misc"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_misc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
+        <TextView
+            android:text="@string/family_misc"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_misc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
 
-    <TextView
-        android:text="@string/family_examples"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/family_examples"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp" />
-
-
-</LinearLayout>
+        <TextView
+            android:text="@string/family_examples"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/family_examples"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" />
+    </LinearLayout>
+</ScrollView>
 
 
 
