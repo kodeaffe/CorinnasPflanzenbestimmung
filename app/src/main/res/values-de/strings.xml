@@ -6,7 +6,21 @@
     <string name="title_activity_family">Zeige Familie</string>
     <string name="family_scientific_name">Wissenschaftlicher Name</string>
     <string name="family_name">Name</string>
+    <string name="family_flower_formula">Blütenformel</string>
+    <string name="family_flower_type">Blütentyp</string>
+    <string name="family_flower_perianth">Blütenhülle</string>
+    <string name="family_flower_stamen">Staubblatt</string>
+    <string name="family_flower_ovary">Fruchtknoten</string>
+    <string name="family_flower_sepal">Kelchblatt</string>
+    <string name="family_flower_petal">Kronblatt</string>
+    <string name="family_fruit">Frucht</string>
+    <string name="family_sorus">Sporenbehälter</string>
+    <string name="family_leaf">Laubblatt</string>
+    <string name="family_involucro">Hüllblatt</string>
+    <string name="family_stipule">Nebenblatt</string>
+    <string name="family_morphology">Wuchsform</string>
+    <string name="family_ingredients">Inhaltsstoffe</string>
+    <string name="family_misc">Sonstiges</string>
     <string name="family_examples">Beispiele</string>
-    <string name="nome">Keine</string>
     <string name="none">Keine</string>
 </resources>

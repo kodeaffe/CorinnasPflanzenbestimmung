@@ -19,13 +19,61 @@ public class FamilyActivity extends AppCompatActivity {
         Log.d("FamilyActiviy.setFamily", "Id: " + id);
         List family = new Datastorage(this).getFamily(id);
         Log.d("FamilyActivity.setFamily", "Family: " + family.toString());
+
         TextView name = (TextView) findViewById(R.id.family_name);
         name.setText((String) family.get(0));
+
         TextView scientific_name =
 			(TextView) findViewById(R.id.family_scientific_name);
         scientific_name.setText((String) family.get(1));
+
+        TextView flower_formula = (TextView) findViewById(R.id.family_flower_formula);
+        flower_formula.setText((String) family.get(2));
+
+        TextView flower_type = (TextView) findViewById(R.id.family_flower_type);
+        flower_type.setText((String) family.get(3));
+
+        TextView flower_perianth = (TextView) findViewById(R.id.family_flower_perianth);
+        flower_perianth.setText((String) family.get(4));
+
+        TextView flower_stamen = (TextView) findViewById(R.id.family_flower_stamen);
+        flower_stamen.setText((String) family.get(5));
+
+        TextView flower_ovary = (TextView) findViewById(R.id.family_flower_ovary);
+        flower_ovary.setText((String) family.get(6));
+
+        TextView flower_sepal = (TextView) findViewById(R.id.family_flower_sepal);
+        flower_sepal.setText((String) family.get(7));
+
+        TextView flower_petal = (TextView) findViewById(R.id.family_flower_petal);
+        flower_petal.setText((String) family.get(8));
+
+        TextView fruit = (TextView) findViewById(R.id.family_fruit);
+        fruit.setText((String) family.get(9));
+
+        TextView sorus = (TextView) findViewById(R.id.family_sorus);
+        sorus.setText((String) family.get(10));
+
+        TextView leaf = (TextView) findViewById(R.id.family_leaf);
+        leaf.setText((String) family.get(11));
+
+        TextView involucro = (TextView) findViewById(R.id.family_involucro);
+        involucro.setText((String) family.get(12));
+
+        TextView stipule = (TextView) findViewById(R.id.family_stipule);
+        stipule.setText((String) family.get(13));
+
+        TextView morphology = (TextView) findViewById(R.id.family_morphology);
+        morphology.setText((String) family.get(14));
+
+        TextView ingredients = (TextView) findViewById(R.id.family_ingredients);
+        ingredients.setText((String) family.get(15));
+
+        TextView misc = (TextView) findViewById(R.id.family_misc);
+        misc.setText((String) family.get(16));
+
         TextView examples = (TextView) findViewById(R.id.family_examples);
-        examples.setText((String) family.get(2));
+        examples.setText((String) family.get(17));
     }
 
 

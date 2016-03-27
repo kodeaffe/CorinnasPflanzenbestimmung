@@ -6,6 +6,21 @@
     <string name="title_activity_family">Show Family</string>
     <string name="family_name">Name</string>
     <string name="family_scientific_name">Scientific Name</string>
+    <string name="family_flower_formula">Flower Formula</string>
+    <string name="family_flower_type">Flower Type</string>
+    <string name="family_flower_perianth">Flower Perianth</string>
+    <string name="family_flower_stamen">Flower Stamen</string>
+    <string name="family_flower_ovary">Flower Ovary</string>
+    <string name="family_flower_sepal">Flower Sepal</string>
+    <string name="family_flower_petal">Flower Petal</string>
+    <string name="family_fruit">Fruit</string>
+    <string name="family_sorus">Sorus</string>
+    <string name="family_leaf">Leaf</string>
+    <string name="family_involucro">Involucro</string>
+    <string name="family_stipule">Stipule</string>
+    <string name="family_morphology">Morpholgy</string>
+    <string name="family_ingredients">Ingredients</string>
+    <string name="family_misc">Miscellaneous</string>
     <string name="family_examples">Examples</string>
     <string name="none">None</string>
 </resources>
